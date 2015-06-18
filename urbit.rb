@@ -16,7 +16,7 @@ class Urbit < Formula
     def install
         ENV.deparallelize
         system "make", "LIB=#{share}"
-        bin.install 'bin/vere'
+        bin.install 'bin/urbit'
         mkdir share
         mkdir share/'zod'
         cp   'urb/urbit.pill', share
@@ -24,6 +24,6 @@ class Urbit < Formula
     end
 
     test do
-        system 'vere'
+        system 'urbit'
     end
 end
